@@ -2,31 +2,31 @@
    "kind":"ReplicationController",
    "apiVersion":"v1",
    "metadata":{
-      "name":"testProject",
+      "name":"msventas",
       "labels":{
-         "app":"testProject"
+         "app":"msventas"
       }
    },
    "spec":{
       "replicas":3,
       "selector":{
-         "app":"testProject"
+         "app":"msventas"
       },
       "template":{
          "metadata":{
             "labels":{
-               "app":"testProject"
+               "app":"msventas"
             }
          },
          "spec":{
             "containers":[
                {
-                  "name":"testProject",
-                  "image":"k8s.gcr.io/testProject:v3",
+                  "name":"msventas",
+                  "image":"184013750779.dkr.ecr.us-east-2.amazonaws.com/msventas:latest",
                   "ports":[
                      {
                         "name":"http-server",
-                        "containerPort":8080
+                        "containerPort":443
                      }
                   ]
                }

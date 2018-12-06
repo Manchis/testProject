@@ -2,20 +2,20 @@
    "kind":"Service",
    "apiVersion":"v1",
    "metadata":{
-      "name":"testProject",
+      "name":"msventas",
       "labels":{
-         "app":"testProject"
+         "app":"msventas"
       }
    },
    "spec":{
       "ports": [
          {
-           "port":8080,
+           "port":443,
            "targetPort":"http-server"
          }
       ],
       "selector":{
-         "app":"testProject"
+         "app":"msventas"
       },
       "type": "LoadBalancer"
    }
