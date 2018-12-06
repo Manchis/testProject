@@ -1,0 +1,37 @@
+{
+   "kind":"ReplicationController",
+   "apiVersion":"v1",
+   "metadata":{
+      "name":"testProject",
+      "labels":{
+         "app":"testProject"
+      }
+   },
+   "spec":{
+      "replicas":3,
+      "selector":{
+         "app":"testProject"
+      },
+      "template":{
+         "metadata":{
+            "labels":{
+               "app":"testProject"
+            }
+         },
+         "spec":{
+            "containers":[
+               {
+                  "name":"testProject",
+                  "image":"k8s.gcr.io/testProject:v3",
+                  "ports":[
+                     {
+                        "name":"http-server",
+                        "containerPort":8080
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }
+}
